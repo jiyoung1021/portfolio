@@ -1,0 +1,107 @@
+// 툴팁
+.tooltip-area {
+  position: relative;
+  .tooltip-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    ~ .tooltip-text {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 1.1rem;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 .75rem 1.2rem .75rem;
+        border-color: transparent transparent rgba(0, 31, 93, .9) transparent
+      }
+    }
+    // 위치
+    &.top {
+      ~ .tooltip-text {
+        bottom: 3.4rem;
+        &::before {
+          bottom: -1.2rem;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &.bottom {
+      ~ .tooltip-text {
+        top: 3.4rem;
+        &::before {
+          top: -1.2rem;
+        }
+      }
+      &.center {
+        ~ .tooltip-text {
+          &::before {
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+    &.left {
+      ~ .tooltip-text {
+        left: -1.1rem;
+        &::before {
+          left: 1.1rem;
+        }
+      }
+    }
+    &.right {
+      ~ .tooltip-text {
+        right: -1.1rem;
+        &::before {
+          left: auto;
+          right: 1.1rem;
+        }
+      }
+    }
+    &.center {
+      ~ .tooltip-text {
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+          left: 50%;
+          transform: translateX(-50%) rotate(180deg);
+        }
+      }
+    }
+    // 사이즈
+    &.large {
+      ~ .tooltip-text {
+        width: 28rem;
+      }
+    }
+    .icon-16-question {
+      border: 1px solid red;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: url(~@/assets/images/common/icons/icon_16_question.png) no-repeat center / 1.6rem 1.6rem;;
+    }
+  }
+  .tooltip-text {
+    position: absolute;
+    display: block;
+    width: 18.3rem;
+    padding: 1.2rem 2.7rem 1.2rem .9rem;
+    font-size: 1.3rem;
+    color: #fff;
+    border-radius: .5rem;
+    background-color: rgba(0, 31, 93, .9);
+    word-break: keep-all;
+    .btn-close {
+      position: absolute;
+      top: .8rem;
+      right: .55rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: url(~@/assets/images/common/icons/icon_09_close_white.png) no-repeat center / .9rem .9rem;
+      opacity: .7;
+    }
+  }
+}

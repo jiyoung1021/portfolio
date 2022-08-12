@@ -1,0 +1,54 @@
+.test {
+  padding: 2rem 0;
+  border-bottom: .1rem solid #eee;
+  ~ .test {
+  }
+  &-header {
+    .title {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+  &-body {
+    padding-top: 2rem;
+    .tooltip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-top: -.1rem;
+        margin-left: -.1rem;
+        border: 1px solid #000;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+          padding-top: 9rem;
+        }
+        &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+          padding-top: 1rem;
+          padding-bottom: 11rem;
+        }
+        &:nth-child(7) {
+          grid-column: 1 / 4;
+          padding-top: 1rem;
+          padding-bottom: 7rem;
+        }
+      }
+      .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+      }
+      .type {
+        display: block;
+      }
+      .tooltip-area {
+        margin-left: .4rem;
+      }
+    }
+  }
+}
