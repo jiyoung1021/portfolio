@@ -3,10 +3,6 @@
     id="page"
     class="page"
   >
-    <!-- <Header
-      title="Test"
-      back
-    /> -->
     <div
       id="content"
       class="content"
@@ -14,13 +10,13 @@
       <!-- content-body -->
       <div class="content-body">
         <section class="section content-side">
-          <div class="test">
-            <div class="test-header">
+          <div class="guide-area">
+            <div class="guide-header">
               <h3 class="title">
                 Tooltip
               </h3>
             </div>
-            <div class="test-body">
+            <div class="guide-body">
               <div class="tooltip">
                 <div class="area">
                   <span class="type">top / left</span>
@@ -133,12 +129,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-// import Header from '@/components/layout/Header.vue'
 import uuTooltip from '@/components/uu-components/TooltipView.vue'
 
 export default defineComponent({
   components: {
-    // Header,
     uuTooltip
   },
   setup () {

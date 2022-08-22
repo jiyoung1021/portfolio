@@ -1,10 +1,10 @@
-import infoContainer from '@/views/info/infoView.vue'
+import infoContainer from '@/views/_container.vue'
 
 const infoView = () => import('@/views/info/infoView.vue')
 
 export default {
   path: '/info',
-  redirect: '/info/infoView',
+  redirect: '/info/_container',
   component: infoContainer,
   children: [
     {

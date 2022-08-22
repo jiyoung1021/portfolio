@@ -1,10 +1,8 @@
 <template>
-  <div id="app">
-    <mainContainer />
-  </div>
+  <mainContainer />
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 import mainContainer from '@/views/_container.vue'
 

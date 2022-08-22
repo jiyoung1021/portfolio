@@ -1,5 +1,5 @@
 <template>
-  <span class="tooltip-area">
+  <div class="tooltip-area">
     <button
       type="button"
       class="tooltip-button"
@@ -22,10 +22,10 @@
         <span class="sr-only">닫기</span>
       </button>
     </span>
-  </span>
+  </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({

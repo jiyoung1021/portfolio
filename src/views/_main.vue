@@ -16,7 +16,7 @@
         v-for="(item, index) in menu"
         :key="index"
       >
-        <!-- 새로운 페이지 이동 + 새로고침 -->
+        <!-- 데이터 이동 X 새로고침 되면서 새로운 페이지 이동 -->
         <!-- <a
           :href="item.link"
           :title="item.menu + ' 페이지 이동'"
@@ -38,10 +38,13 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'MainContainer',
+  name: 'MainContainer2',
   setup () {
     const menu = [
-      { menu: '테스트', link: '/info/infoView' }
+      { menu: '소개', link: '/info/container' },
+      { menu: '가이드', link: '/guide/main' },
+      { menu: '노트', link: '/note/container' },
+      { menu: '프로젝트', link: '/project/container' }
     ]
     return {
       menu

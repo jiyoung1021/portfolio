@@ -44,6 +44,10 @@
       git branch -M main
       git remote add origin https://github.com/jiyoung1021/portfolio.git
       git push -u origin main
+
+      또는
+      https://github.com/jiyoung1021/portfolio.git
+      npm i
     </div>
     <div>
       npm install sass-loader sass webpack --save-dev
@@ -122,7 +126,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 
 </script>
 

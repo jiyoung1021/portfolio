@@ -7,4 +7,4 @@ import '@/assets/scss/style.scss'
 
 const app = createApp(App)
 app.use(router)
-app.mount('#application')
+app.mount('#app')
