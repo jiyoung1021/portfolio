@@ -25,4 +25,22 @@
       </code>
     </pre>
   </div>
+  <div>
+    <pre class="language-html">
+      <code>
+        components: {
+          'uu-toast': uu-toast
+        },
+
+        const toast = ref<InstanceType<typeof uu-toast> | null>(null)
+          - 토스트 컨퍼넌트를 전체를 새로 불러와서 쓸 수 있음
+          - 토스트 컨퍼넌트에 들어있는 function 함수를 props 없이 쓸 수 있음
+
+        토스트 팝업의 props 없이 함수를 쓴 경우
+        onMounted(() => {
+          toast.value?.showToast()
+        })
+      </instancetype<typeof></code>
+    </pre>
+  </div>
 </template>

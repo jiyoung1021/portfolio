@@ -127,7 +127,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 import uuTooltip from '@/components/uu-components/TooltipView.vue'
 

@@ -30,7 +30,9 @@ export default defineComponent({
   setup () {
     const guideMenu = [
       { name: 'tooltip', link: '/uu-libs/uuLibsTooltip' },
-      { name: 'combobox', link: '/uu-libs/uuLibsComboBox' }
+      { name: 'combobox', link: '/uu-libs/uuLibsComboBox' },
+      { name: 'progress', link: '/uu-libs/uuLibsProgress' },
+      { name: 'toast', link: '/uu-libs/uuLibsToast' }
     ]
 
     return {
