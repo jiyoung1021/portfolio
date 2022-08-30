@@ -35,11 +35,11 @@
         <input
           :id="randomString + 'toggle'"
           type="checkbox"
-          :value="toggleValue"
+          :value="toggleText"
           @change="toggleSwitch"
         >
         <span class="slide">
-          <span class="text">{{ toggleValue? 'ON':'OFF' }}</span>
+          <span class="text">{{ toggleText? 'ON':'OFF' }}</span>
         </span>
       </label>
     </div>
@@ -76,15 +76,15 @@ export default defineComponent({
   setup (props, { emit }) {
     const randomString = getRandomId()
 
-    const toggleValue = ref(true)
+    const toggleText = ref(true)
 
     const state = reactive({
       toggleTextValue: props.modelValue
     })
 
     function toggleSwitch () {
-      toggleValue.value = !toggleValue.value
-      console.log(toggleValue.value)
+      toggleText.value = !toggleText.value
+      console.log(toggleText.value)
     }
 
     function toggleOn () {
@@ -94,7 +94,7 @@ export default defineComponent({
 
     return {
       randomString,
-      toggleValue,
+      toggleText,
       ...toRefs(state),
       toggleSwitch,
       toggleOn

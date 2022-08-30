@@ -1,3 +1,4 @@
+
 <template>
   <div
     id="page"
@@ -11,7 +12,7 @@
       <div class="content-body">
         <section class="section content-side">
           <div>
-            <uu-combo-box
+            <uu-combobox
               v-model="comboValue"
               :options="options"
               @click="changeEvent"
@@ -26,11 +27,11 @@
 
 <script>
 import { defineComponent } from 'vue'
-import uuComboBox from '@/components/uu-components/ComboBox.vue'
+import uuCombobox from '@/components/uu-components/Combobox.vue'
 
 export default defineComponent({
   components: {
-    uuComboBox
+    uuCombobox
   },
   setup () {
     const options = ['test1', 'test2', 'test3']

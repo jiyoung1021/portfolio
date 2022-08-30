@@ -1,7 +1,8 @@
 import guideContainer from '@/views/container.vue'
 
 const main = () => import('@/views/guide/main.vue')
-const uuLibsComboBox = () => import('@/views/guide/uu-libs/libsComboBox.vue')
+const uuLibsCheckbox = () => import('@/views/guide/uu-libs/libsCheckbox.vue')
+const uuLibsCombobox = () => import('@/views/guide/uu-libs/libsCombobox.vue')
 const uuLibsTooltip = () => import('@/views/guide/uu-libs/libsTooltip.vue')
 const uuLibsProgress = () => import('@/views/guide/uu-libs/libsProgress.vue')
 const uuLibsToast = () => import('@/views/guide/uu-libs/libsToast.vue')
@@ -20,8 +21,15 @@ export default {
       }
     },
     {
-      path: '/uu-libs/uuLibsComboBox',
-      component: uuLibsComboBox,
+      path: '/uu-libs/uuLibsCheckbox',
+      component: uuLibsCheckbox,
+      meta: {
+        title: 'checkbox'
+      }
+    },
+    {
+      path: '/uu-libs/uuLibsCombobox',
+      component: uuLibsCombobox,
       meta: {
         title: 'combobox'
       }
