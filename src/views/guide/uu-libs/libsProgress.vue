@@ -6,7 +6,7 @@
 </template>
 <script>
 import { defineComponent } from 'vue'
-import uuProgress from '@/components/uu-components/ProgressView.vue'
+import uuProgress from '@/components/uu-components/Progress.vue'
 
 export default defineComponent({
   components: {

@@ -6,7 +6,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue'
-import uuToast from '@/components/uu-components/ToastView2.vue'
+import uuToast from '@/components/uu-components/Toast.vue'
 
 export default defineComponent({
   components: {

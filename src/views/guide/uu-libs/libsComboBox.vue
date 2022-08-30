@@ -26,7 +26,7 @@
 
 <script>
 import { defineComponent } from 'vue'
-import uuComboBox from '@/components/uu-components/ComboBoxView.vue'
+import uuComboBox from '@/components/uu-components/ComboBox.vue'
 
 export default defineComponent({
   components: {

@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
   routerProjict,
   {
     path: '/',
-    component: () => import(/* webpackChunkName: "main" */ '@/views/_main.vue')
+    component: () => import(/* webpackChunkName: "main" */ '@/views/main.vue')
   }
 ]
 

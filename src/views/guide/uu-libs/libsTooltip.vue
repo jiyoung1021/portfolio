@@ -129,7 +129,7 @@
 
 <script>
 import { defineComponent } from 'vue'
-import uuTooltip from '@/components/uu-components/TooltipView.vue'
+import uuTooltip from '@/components/uu-components/Tooltip.vue'
 
 export default defineComponent({
   components: {

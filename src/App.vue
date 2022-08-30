@@ -4,7 +4,7 @@
 
 <script>
 import { defineComponent } from 'vue'
-import mainContainer from '@/views/_container.vue'
+import mainContainer from '@/views/container.vue'
 
 export default defineComponent({
   name: 'App',

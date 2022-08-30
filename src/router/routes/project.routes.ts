@@ -1,10 +1,10 @@
-import projectContainer from '@/views/_container.vue'
+import projectContainer from '@/views/container.vue'
 
-// const container = () => import('@/views/project/_container.vue')
+// const container = () => import('@/views/project/container.vue')
 
 export default {
   path: '/project',
-  redirect: '/project/_container',
+  redirect: '/project/container',
   component: projectContainer,
   children: [
     // {

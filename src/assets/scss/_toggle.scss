@@ -1,0 +1,86 @@
+.toggle-area {
+  margin: 3rem;
+  .toggle {
+    &-check {
+      label {
+        position: relative;
+        display: block;
+        width: 5rem;
+        .slide  {
+          position: relative;
+          display: block;
+          height: 2rem;
+          border-radius: 1rem;
+          background-color: #3a56c9;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 2.2rem;
+            height: 2.2rem;
+            border: .2rem solid #3a56c9;
+            border-radius: 50%;
+            background-color: #fff;
+            transform: translateY(-50%);
+          }
+          .text {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 0 .5rem 0 .7rem;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #fff;
+            transform: translateY(-50%);
+          }
+        }
+        input:checked {
+          ~ .slide {
+            &::before {
+              left: 0;
+            }
+            .text {
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+    &-radio {display: flex;
+      width: 8.4rem;
+      height: 3rem;
+      border: .1rem solid #ddd;
+      border-radius: 1.5rem;
+      background-color: #f0f2f9;
+      label {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        .text {
+          font-size: 1.3rem;
+          color: #999;
+        }
+        input:checked {
+          ~ .text {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              font-weight: bold;
+              color: #fff;
+              border-radius: 1.5rem;
+              background-color: #3a56c9;
+          }
+        }
+      }
+    }
+  }
+}

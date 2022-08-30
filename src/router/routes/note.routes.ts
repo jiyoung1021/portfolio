@@ -1,10 +1,10 @@
-import noteContainer from '@/views/_container.vue'
+import noteContainer from '@/views/container.vue'
 
-// const container = () => import('@/views/note/_container.vue')
+// const container = () => import('@/views/note/container.vue')
 
 export default {
   path: '/note',
-  redirect: '/note/_container',
+  redirect: '/note/container',
   component: noteContainer,
   children: [
     // {

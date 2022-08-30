@@ -1,10 +1,11 @@
-import guideContainer from '@/views/_container.vue'
+import guideContainer from '@/views/container.vue'
 
-const main = () => import('@/views/guide/_main.vue')
+const main = () => import('@/views/guide/main.vue')
 const uuLibsComboBox = () => import('@/views/guide/uu-libs/libsComboBox.vue')
 const uuLibsTooltip = () => import('@/views/guide/uu-libs/libsTooltip.vue')
 const uuLibsProgress = () => import('@/views/guide/uu-libs/libsProgress.vue')
 const uuLibsToast = () => import('@/views/guide/uu-libs/libsToast.vue')
+const uuLibsToggle = () => import('@/views/guide/uu-libs/libsToggle.vue')
 
 export default {
   path: '/guide',
@@ -44,6 +45,13 @@ export default {
       component: uuLibsToast,
       meta: {
         title: 'toast'
+      }
+    },
+    {
+      path: '/uu-libs/uuLibsToggle',
+      component: uuLibsToggle,
+      meta: {
+        title: 'toggle'
       }
     }
   ]

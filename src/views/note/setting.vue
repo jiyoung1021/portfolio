@@ -57,16 +57,32 @@
     </div>
   </div>
   <div>
-    selint
+    eslintrc.js
     <div>
       .eslintrc.js
     </div>
+    module.exports = {
+    root: true,
+    env: {
+    node: true
+    },
     extends: [
     'plugin:vue/vue3-recommended',
-    ]
+    '@vue/standard',
+    '@vue/typescript/recommended'
+    ],
+    parserOptions: {
+    ecmaVersion: 2020
+    },
+    rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vue/multi-word-component-names': 'off'
+    }
+    }
   </div>
   <div>
-    setting
+    settings.json
     <div>
       {
       "editor.bracketPairColorization.enabled": true,

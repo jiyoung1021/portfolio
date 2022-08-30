@@ -32,7 +32,8 @@ export default defineComponent({
       { name: 'tooltip', link: '/uu-libs/uuLibsTooltip' },
       { name: 'combobox', link: '/uu-libs/uuLibsComboBox' },
       { name: 'progress', link: '/uu-libs/uuLibsProgress' },
-      { name: 'toast', link: '/uu-libs/uuLibsToast' }
+      { name: 'toast', link: '/uu-libs/uuLibsToast' },
+      { name: 'toggle', link: '/uu-libs/uuLibsToggle' }
     ]
 
     return {
