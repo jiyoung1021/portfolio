@@ -1,0 +1,36 @@
+.check-area {
+  position: relative;
+  padding: 1.8rem;
+  input {
+    + label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: '';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.8rem;
+        height: 1.8rem;
+        border: .1rem solid #c4cad2;
+        border-radius: .3rem;
+        background: #fff url(#{$img-path}/visual/visual_check_default.png) no-repeat center / 1.2rem auto;
+      }
+      span {
+        display: block;
+        margin-left: .8rem;
+      }
+    }
+    &:checked {
+      + label {
+        &::before {
+          width: 2rem;
+          height: 2rem;
+          border: 0 none;
+          background: #488be2 url(#{$img-path}/visual/visual_check_checked.png) no-repeat center / 1.2rem auto;
+        }
+      }
+    }
+  }
+}

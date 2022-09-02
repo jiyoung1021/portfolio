@@ -29,7 +29,7 @@ export default defineComponent({
   name: 'GuideContainer',
   setup () {
     const guideMenu = [
-      { name: 'tooltip', link: '/uu-libs/uuLibsCheckbox' },
+      { name: 'checkbox', link: '/uu-libs/uuLibsCheckbox' },
       { name: 'combobox', link: '/uu-libs/uuLibsCombobox' },
       { name: 'progress', link: '/uu-libs/uuLibsProgress' },
       { name: 'toast', link: '/uu-libs/uuLibsToast' },
