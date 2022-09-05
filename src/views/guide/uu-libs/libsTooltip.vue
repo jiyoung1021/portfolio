@@ -128,7 +128,8 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
+import Prism from 'prismjs'
 import uuTooltip from '@/components/uu-components/Tooltip.vue'
 
 export default defineComponent({
@@ -136,6 +137,9 @@ export default defineComponent({
     uuTooltip
   },
   setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
     return {
     }
   }

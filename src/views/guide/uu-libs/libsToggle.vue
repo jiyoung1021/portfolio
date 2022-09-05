@@ -10,7 +10,8 @@
   />
 </template>
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue'
+import { defineComponent, onMounted, reactive, toRefs } from 'vue'
+import Prism from 'prismjs'
 import uuToggle from '@/components/uu-components/Toggle.vue'
 
 export default defineComponent({
@@ -18,6 +19,10 @@ export default defineComponent({
     uuToggle
   },
   setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
     const state = reactive({
       toggleText01: '선택'
     })

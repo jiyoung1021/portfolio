@@ -122,4 +122,46 @@
       </statetype></statetype></code>
     </pre>
   </div>
+  <div>
+    <pre class="language-html">
+      <code>
+        공통 불러오는 방법
+
+        1. 공통 함수 파일 import
+
+        <script lang="ts">
+          import { getRandomId } from '@/utils/common.function'
+        </script>
+
+        2. setup() {} 안 에 정의하고 return
+
+          setup () {
+            const randomString = getRandomId()
+            return {
+              randomString
+            }
+          }
+
+        3. 화면단에서 사용 * 고유식별자 필수 입력
+        예시
+        :id="'tab' + randomString + index"
+      </code>
+    </pre>
+  </div>
 </template>
+<script>
+import { defineComponent, onMounted } from 'vue'
+import Prism from 'prismjs'
+
+export default defineComponent({
+  components: {
+  },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+    return {
+    }
+  }
+})
+</script>

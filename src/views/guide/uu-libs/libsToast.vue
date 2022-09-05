@@ -5,7 +5,8 @@
   />
 </template>
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
+import Prism from 'prismjs'
 import uuToast from '@/components/uu-components/Toast.vue'
 
 export default defineComponent({
@@ -13,6 +14,10 @@ export default defineComponent({
     'uu-toast': uuToast
   },
   setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
     const message = ref('안녕하세요')
 
     const toast = ref<InstanceType<typeof uuToast> | null>(null)

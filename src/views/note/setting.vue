@@ -141,11 +141,19 @@
     </div>
   </div>
 </template>
+<script>
+import { defineComponent, onMounted } from 'vue'
+import Prism from 'prismjs'
 
-<script lang="ts">
-
+export default defineComponent({
+  components: {
+  },
+  setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+    return {
+    }
+  }
+})
 </script>
-
-<style scoped>
-
-</style>

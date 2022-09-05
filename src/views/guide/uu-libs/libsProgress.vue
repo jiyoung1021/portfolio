@@ -5,7 +5,8 @@
   />
 </template>
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
+import Prism from 'prismjs'
 import uuProgress from '@/components/uu-components/Progress.vue'
 
 export default defineComponent({
@@ -13,6 +14,10 @@ export default defineComponent({
     uuProgress
   },
   setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
     return {
     }
   }

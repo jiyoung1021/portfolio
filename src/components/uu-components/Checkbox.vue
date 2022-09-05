@@ -5,9 +5,14 @@
       :checked="checked"
       :value="value"
       type="checkbox"
-      @change="checkedOn"
+      class="check-input"
+      @change="updateInput"
     >
-    <label :for="randomString + 'checkbox'">
+    <label
+      :for="randomString + 'checkbox'"
+      class="check-label"
+      tabindex="0"
+    >
       <span><slot>{{ label }}</slot></span>
     </label>
   </div>
@@ -19,7 +24,7 @@ import { getRandomId } from '@/utils/common.function'
 export default defineComponent({
   props: {
     modelValue: {
-      type: Boolean,
+      type: [Boolean, Array],
       default: false
     },
     value: {
@@ -31,20 +36,20 @@ export default defineComponent({
       default: ''
     }
   },
-  emits: [],
+  emits: ['update:modelValue'],
   setup () {
     const randomString = getRandomId()
     const checked = ref(false)
 
-    function checkedOn () {
+    function updateInput () {
       checked.value = !checked.value
-      console.log(checked.value)
+      // console.log(checked.value)
     }
 
     return {
       randomString,
       checked,
-      checkedOn
+      updateInput
     }
   }
 })

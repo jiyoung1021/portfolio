@@ -26,7 +26,8 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
+import Prism from 'prismjs'
 import uuCombobox from '@/components/uu-components/Combobox.vue'
 
 export default defineComponent({
@@ -34,6 +35,10 @@ export default defineComponent({
     uuCombobox
   },
   setup () {
+    onMounted(() => {
+      Prism.highlightAll()
+    })
+
     const options = ['test1', 'test2', 'test3']
 
     const comboValue = options[0]
