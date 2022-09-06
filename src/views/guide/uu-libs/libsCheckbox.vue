@@ -1,8 +1,20 @@
 <template>
   <uu-checkbox
-    v-model="checkValue"
+    v-model="checkValue1"
     label="checkbox"
-    value="value"
+    value="value1"
+    @change="changeEvent"
+  />
+  <uu-checkbox
+    v-model="checkValue2"
+    label="checkbox2"
+    value="value2"
+    @change="changeEvent"
+  />
+  <uu-checkbox
+    v-model="checkValue2"
+    label="checkbox3"
+    value="value3"
     @change="changeEvent"
   />
 </template>
@@ -21,12 +33,14 @@ export default defineComponent({
     })
 
     const state = reactive({
-      checkValue: true
+      checkValue1: true,
+      checkValue2: ['value2']
     })
 
-    function changeEvent (val : boolean | []) {
-      console.log(val)
+    function changeEvent (value : boolean | []) {
+      console.log(value)
     }
+
     return {
       ...toRefs(state),
       changeEvent

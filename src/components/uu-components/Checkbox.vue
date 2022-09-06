@@ -18,7 +18,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
 import { getRandomId } from '@/utils/common.function'
 
 export default defineComponent({
@@ -36,14 +36,33 @@ export default defineComponent({
       default: ''
     }
   },
-  emits: ['update:modelValue'],
-  setup () {
+  emits: ['update:modelValue', 'change'],
+  setup (props, { emit }) {
     const randomString = getRandomId()
-    const checked = ref(false)
+    const trueValue = ref(true)
+    const falseValue = ref(false)
+    const checked = computed(() => {
+      if (props.modelValue instanceof Array) {
+        return props.modelValue.includes(props.value)
+      }
+      return props.modelValue === trueValue.value
+    })
 
-    function updateInput () {
-      checked.value = !checked.value
-      // console.log(checked.value)
+    function updateInput (event : { target: HTMLInputElement }) {
+      const checked = event.target.checked
+      if (props.modelValue instanceof Array) {
+        const arrayValue = [...props.modelValue]
+        if (checked) {
+          arrayValue.push(props.value)
+        } else {
+          arrayValue.splice(arrayValue.indexOf(props.value), 1)
+        }
+        emit('update:modelValue', arrayValue, checked)
+        emit('change', arrayValue, checked)
+      } else {
+        emit('update:modelValue', checked ? trueValue.value : falseValue.value)
+        emit('change', checked ? trueValue.value : falseValue.value)
+      }
     }
 
     return {

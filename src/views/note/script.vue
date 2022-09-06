@@ -1,5 +1,9 @@
 <template>
   <div>
+    vue
+    확장성을 고려해 작성
+  </div>
+  <div>
     vue router
     mode : 기본 값은 hash 모드 (history 모드를 사용하면 브라우저 히스토리 스택에 기록됨)
     redirect : 리다이렉팅 (주로 메인 페이지 등에 사용)
@@ -147,6 +151,60 @@
         :id="'tab' + randomString + index"
       </code>
     </pre>
+  </div>
+  <div>
+    v-model
+    - 양식 입력 요소에 대한 양방향 데이터 바인딩을 활성화
+    - value는 modelValue, event 전달은 update:modelValue
+    - 부모 : v-model="modelValue"
+    - 자식 : props: {modelValue: { type: String, default: '' } }, emits: ['update:modelValue'] 추가
+    - v-model 이 있는 컴포넌트에 v-model 바인딩할 때 새 기본값을 사용
+    - 입력값이 변경되면 구성 요소 내부의 상태에 값을 반영
+    - 구성 요소의 상태가 변경되면 양식 입력 요소에 변경 사항이 반영
+
+    props
+    - 컴포넌트의 정보를 자식 컴포넌트로 전달하기 위해 사용하는 사용자 지정 특성
+    - 부모 : @emitname="eventName"
+    - 자식 : emits: ['emitname']
+
+    emit
+    - 다른 컴포넌트에게 현재 컴포넌트의 이벤트나 데이터를 전달하기 위해 사용
+    - 직접 사용자 정의 이벤트를 내보낼 수 있음
+    - v-model 데이터 흐름을 추적하기 쉽게 함
+  </div>
+  <div>
+    Array.prototype.includes()
+    - 배열이 특정 요소를 포함하고 있는지 확인
+  </div>
+  <div>
+    HTMLInputElement
+    - input 요소를 다루는 인터페이스
+    - 레이아웃 및 표시를 조작하기 위한 특수 속성 및 메서드 제공
+  </div>
+  <div>
+    push()
+    - 배열에 데이터 추가 (맨 끝 인덱스부터 추가됨)
+    - 1개의 배열씩 추가
+    splice()
+    - 배열의 특정 인덱스에 있는 값을 변경 또는 삭제
+    - 1개의 배열씩 삭제
+  </div>
+  <div>
+    indexOf()
+    - 배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환
+    - 문자열에서 원하는 문자열을 검색하여 찾거나 아니면 배열에서 원하는 특정 배열값의 존재여부 등을 확인
+    - 배열의 경우 위치값을 인덱스로 반환하는 함수
+    - 문자타입 뿐만아니라 배열에서도 사용가능
+    - -1 값이 없음을 의미
+    - string.indexOf(searchvalue, position)
+    searchvalue : 필수 입력값, 찾을 문자열
+    position : optional, 기본값은 0, string에서 searchvalue를 찾기 시작할 위치
+  </div>
+  <div>
+    es6 스프레드 연산자
+    ...
+    - 배열, 문자열, 객체 등 몇개의 배열이 오는지 모를 때 사용가능
+    - ex) [...props.modelValue]
   </div>
 </template>
 <script>
