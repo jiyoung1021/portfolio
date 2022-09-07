@@ -34,5 +34,15 @@
         }
       }
     }
+    &:disabled {
+      + .check-label {
+        &::before {
+          width: 1.8rem;
+          height: 1.8rem;
+          border: .1rem solid #c4cad2;
+          background: #ebeef3 url(#{$img-path}/visual/visual_check_default.png) no-repeat center / 1.2rem auto;
+        }
+      }
+    }
   }
 }

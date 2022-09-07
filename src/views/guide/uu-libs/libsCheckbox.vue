@@ -6,6 +6,13 @@
     @change="changeEvent"
   />
   <uu-checkbox
+    v-model="checkValue1"
+    label="disabled"
+    value="value1"
+    disabled
+    @change="changeEvent"
+  />
+  <uu-checkbox
     v-model="checkValue2"
     label="checkbox2"
     value="value2"

@@ -6,6 +6,7 @@
       :value="value"
       type="checkbox"
       class="check-input"
+      :disabled="disabled"
       @change="updateInput"
     >
     <label
@@ -34,6 +35,10 @@ export default defineComponent({
     label: {
       type: String,
       default: ''
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ['update:modelValue', 'change'],
