@@ -45,7 +45,7 @@
 
       @input - 요소의 값이 변경된 직후에 발생
       @change - 내용이 변경된 후 요소가 포커스를 잃었을 때 발생
-      @input과 @change 차이점은 : @change이벤트도 동작
+      @input과 @change 차이점은 : @change이벤트도 동작 ex) select 요소
 
       v-show
       - css 기반으로 전환되므로, 초기 조건과 관계없이 항상 렌더링
