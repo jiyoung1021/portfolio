@@ -2,6 +2,7 @@
 html {
   font-size: 62.5%;
 }
+
 body {
   -webkit-text-size-adjust:none;
   -ms-user-select: none; 
@@ -19,23 +20,28 @@ body {
     user-select: text;
   }
 }
+
 body, div, p, span, a, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, header, footer, main, article, section, aside {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body, input, textarea, select, button, table {
   font-size: 1.4rem;
   font-family: 'Spoqa Han Sans', sans-serif;
   line-height: 1.4;
   color: #111;
 }
+
 img, fieldset {
   border: 0;
 }
+
 fieldset { // bug
   min-width: 0;
 }
+
 a {
   color: #000;
   text-decoration: none;
@@ -44,16 +50,19 @@ a {
     color: #000;
   }
 }
+
 input, select, textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0;
   -webkit-border-radius: 0;
+  border-radius: 0;
 }
+
 input[type="text"], input[type="number"], input[type="password"] {
   border: 0 none;
 }
+
 input[type="checkbox"], input[type="radio"] {
   overflow: hidden;
   position: absolute;
@@ -61,15 +70,17 @@ input[type="checkbox"], input[type="radio"] {
   left: 0;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
+  padding: 0;
   clip: rect(0,0,0,0);
   border: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border-radius: 0;
+  appearance: none;
   -webkit-border-radius: 0;
+  border-radius: 0;
 }
+
 input {
   &:disabled,
   &:read-only:not(select) {
@@ -90,6 +101,7 @@ input {
     opacity: 1; /* required on iOS */
   }
 }
+
 input::placeholder {
   color: #bbb;
 }
@@ -107,21 +119,25 @@ input::-ms-reveal {
   width : 0;
   height: 0;
 }
+
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration {
   display: none; 
 }
+
 // input number arrows 제거
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 input[type=number] {
   -moz-appearance: textfield;
 }
+
 button {
   border: 0;
   border-radius: 0;
@@ -130,27 +146,34 @@ button {
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 ul, ol {
   list-style: none;
 }
+
 table {
   border-collapse: collapse;
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
+
 b, strong {
   font-weight: 700;
 }
+
 hr {
   margin: 0;
 }
+
 //focus outline remove 21.02.24 포커스 작업시 삭제 하고 작업
 :focus {
   // outline: 2px;
   outline-color: transparent;
   outline-style: none;
 }
+
 :focus-visible {
   outline-color: transparent;
   outline-style: none;

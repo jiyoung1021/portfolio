@@ -1,5 +1,8 @@
 <template>
-  <uu-toggle />
+  <uu-toggle
+    left-text="ON"
+    right-text="OFF"
+  />
   <uu-toggle
     v-model="toggleText01"
     text-toggle

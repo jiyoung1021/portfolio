@@ -31,6 +31,7 @@
       v-else
       class="toggle-check"
     >
+      <!-- 텍스트가 정해져 있을 경우
       <label :for="randomString + 'toggle'">
         <input
           :id="randomString + 'toggle'"
@@ -40,6 +41,19 @@
         >
         <span class="slide">
           <span class="text">{{ toggleText? 'ON':'OFF' }}</span>
+        </span>
+      </label> -->
+      <label :for="randomString + 'toggle'">
+        <input
+          :id="randomString + 'toggle'"
+          type="checkbox"
+          :value="toggleText"
+          :true-value="leftText"
+          :false-value="rightText"
+          @change="toggleSwitch"
+        >
+        <span class="slide">
+          <span class="text">{{ toggleText? leftText:rightText }}</span>
         </span>
       </label>
     </div>
