@@ -1,11 +1,14 @@
 import guideContainer from '@/views/container.vue'
 
 const main = () => import('@/views/guide/main.vue')
+// uu
+const uuLibsButton = () => import('@/views/guide/uu-libs/libsButton.vue')
 const uuLibsCheckbox = () => import('@/views/guide/uu-libs/libsCheckbox.vue')
 const uuLibsCombobox = () => import('@/views/guide/uu-libs/libsCombobox.vue')
 const uuLibsInput = () => import('@/views/guide/uu-libs/libsInput.vue')
 const uuLibsProgress = () => import('@/views/guide/uu-libs/libsProgress.vue')
 const uuLibsRadio = () => import('@/views/guide/uu-libs/libsRadio.vue')
+const uuLibsTab = () => import('@/views/guide/uu-libs/libsTab.vue')
 const uuLibsToast = () => import('@/views/guide/uu-libs/libsToast.vue')
 const uuLibsTodo = () => import('@/views/guide/uu-libs/libsTodo.vue')
 const uuLibsToggle = () => import('@/views/guide/uu-libs/libsToggle.vue')
@@ -21,6 +24,13 @@ export default {
       component: main,
       meta: {
         title: '가이드 메인'
+      }
+    },
+    {
+      path: '/uu-libs/uuLibsButton',
+      component: uuLibsButton,
+      meta: {
+        title: 'button'
       }
     },
     {
@@ -56,6 +66,13 @@ export default {
       component: uuLibsRadio,
       meta: {
         title: 'radio'
+      }
+    },
+    {
+      path: '/uu-libs/uuLibsTab',
+      component: uuLibsTab,
+      meta: {
+        title: 'tab'
       }
     },
     {

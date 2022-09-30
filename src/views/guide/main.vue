@@ -29,11 +29,13 @@ export default defineComponent({
   name: 'GuideContainer',
   setup () {
     const guideMenu = [
+      { name: 'Button', link: '/uu-libs/uuLibsButton' },
       { name: 'Checkbox', link: '/uu-libs/uuLibsCheckbox' },
       { name: 'Combobox', link: '/uu-libs/uuLibsCombobox' },
       { name: 'Input', link: '/uu-libs/uuLibsInput' },
       { name: 'Progress', link: '/uu-libs/uuLibsProgress' },
       { name: 'Radio', link: '/uu-libs/uuLibsRadio' },
+      { name: 'Tab', link: '/uu-libs/uuLibsTab' },
       { name: 'Toast', link: '/uu-libs/uuLibsToast' },
       { name: 'Todo', link: '/uu-libs/uuLibsTodo' },
       { name: 'Toggle', link: '/uu-libs/uuLibsToggle' },

@@ -15,6 +15,25 @@
     - input 1개라도 들어간다면 form으로 묶음
     Fieldset : form 요소에서 연관된 요소들을 하나의 그룹으로 묶을 때 사용
     - 여러 묶을일 경우 fieldset 나눠서 묶음
+
+    button
+    - 키보드 'space'와 'enter' 동작
+    - form 전송하거나 취소할 때
+    - 팝업(모달) 열때 또는 팝업메뉴 열때
+    - 동영상 플레이
+    - 내용의 일부 변경
+    - 동작을 위해 javascript 필요
+    - 마우스 오른쪽 버튼에 별다른 기능 없음
+
+    a
+    - 키보드 'enter' 동작
+    - 브라우저 redraw/refresg
+    - 다른 문서 링크하거나, 같은 문서내 다른 anchor 이동
+    - 새창
+    - href 속성에 따라 페이지 이동
+    - 마우스 오른쪽 버튼에 여러 기능 있음
+
+    a 태그에 role="button" 속성을 추가하고, 키보드 'space'에 동작하도록 스크립트를 추가해서 사용
   </div>
 </template>
 <script>
