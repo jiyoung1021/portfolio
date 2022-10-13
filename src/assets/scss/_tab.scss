@@ -1,0 +1,16 @@
+.tab {
+  border: 1px solid red;
+  &.active {
+    border: 1px solid blue;
+  }
+  &-area {
+  }
+  &-header {
+  }
+  &-content {
+    border: 1px solid green;
+    padding: 2rem;
+  }
+  &-panel {
+  }
+}

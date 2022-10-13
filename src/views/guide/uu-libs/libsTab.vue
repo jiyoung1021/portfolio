@@ -1,5 +1,30 @@
 <template>
-  <uu-tab />
+  <uu-tab
+    :tabs="tabs"
+  >
+    <template #slide1>
+      tab content1
+    </template>
+    <template #slide2>
+      tab content2
+    </template>
+    <template #slide3>
+      tab content3
+    </template>
+  </uu-tab>
+  <uu-tab
+    :tabs="tabs1"
+  >
+    <template #slide1>
+      tab content1
+    </template>
+    <template #slide2>
+      tab content2
+    </template>
+    <template #slide3>
+      tab content3
+    </template>
+  </uu-tab>
 </template>
 <script>
 import { defineComponent, onMounted } from 'vue'
@@ -15,7 +40,13 @@ export default defineComponent({
       Prism.highlightAll()
     })
 
+    const tabs = ['tab1', 'tab2', 'tab3']
+
+    const tabs1 = ['tab12', 'tab22', 'tab32']
+
     return {
+      tabs,
+      tabs1
     }
   }
 })

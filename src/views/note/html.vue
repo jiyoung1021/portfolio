@@ -34,6 +34,15 @@
     - 마우스 오른쪽 버튼에 여러 기능 있음
 
     a 태그에 role="button" 속성을 추가하고, 키보드 'space'에 동작하도록 스크립트를 추가해서 사용
+
+    tab과 radio의 차이
+    - tab은 ui적으로 필요한 화면일 경우
+    - radio는 서버로 데이터를 넘겨줄 경우
+    - 디자인은 tab으로 보일 수 있으니 주의할 것
+
+    class
+    색상이나 캐릭터 등 종류가 많을 때는
+    class name : type01, type02 하기
   </div>
 </template>
 <script>

@@ -29,6 +29,8 @@ export default defineComponent({
   name: 'GuideContainer',
   setup () {
     const guideMenu = [
+      { name: 'typeScript', link: '/ui-libs/typeScript' },
+      { name: 'Accordion', link: '/uu-libs/uuLibsAccordion' },
       { name: 'Button', link: '/uu-libs/uuLibsButton' },
       { name: 'Checkbox', link: '/uu-libs/uuLibsCheckbox' },
       { name: 'Combobox', link: '/uu-libs/uuLibsCombobox' },

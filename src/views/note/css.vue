@@ -37,6 +37,52 @@
     - 크기를 조정할떄 비율로 조정가능
     - width / height
     - 3 : 1 이면 width: 33.3%, height: 100%
+
+    <pre class="language-html">
+      <code>
+$char: (
+'woodcutter': #ccabff,
+'analyst': #94caff,
+'judge': #8ed6f1,
+'pursuer': #c8b4a5,
+'collector': #6c7c88,
+'adventurer': #89bae1,
+'notset': #94caff
+);
+@each $char-name, $char-bg in $char {
+  &.#{$char-name} {
+    background-color: $char-bg;
+    &::after {
+      @if #{$char-name} == 'woodcutter' {
+        width: 28.3rem;
+      } @else if #{$char-name} == 'analyst' {
+        width: 18.5rem;
+      } @else if #{$char-name} == 'judge' {
+        width: 31rem;
+      } @else if #{$char-name} == 'pursuer' {
+        width: 25.3rem;
+      } @else if #{$char-name} == 'collector' {
+        width: 24rem;
+      } @else if #{$char-name} == 'adventurer' {
+        width: 18.5rem;
+      } @else {
+        width: 18rem;
+      }
+      background: url(#{$img-path}/visual/visual_character_#{$char-name}01.png) no-repeat 0 0 / contain;
+    }
+  }
+}
+
+$i: index;
+@for $i from 1 through 5 {
+  &.level0#{$i} {
+    &::after {
+      background: url(#{$img-path}/visual/visual_level0#{$i}_small.png) no-repeat 0 0 / contain;
+    }
+  }
+}
+      </code>
+    </pre>
   </div>
 </template>
 <script>
