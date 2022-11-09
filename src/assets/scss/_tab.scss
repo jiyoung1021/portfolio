@@ -1,16 +1,51 @@
 .tab {
-  border: 1px solid red;
-  &.active {
-    border: 1px solid blue;
-  }
+  width: 100%;
   &-area {
   }
   &-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.8rem;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: .1rem;
+      background-color: #ddd;
+    }
+    button {
+      width: 100%;
+      height: 4.6rem;
+      @include fontHeight(1.6);
+      color: #666;
+    }
   }
   &-content {
-    border: 1px solid green;
     padding: 2rem;
   }
   &-panel {
+  }
+  &.active {
+    button {
+      position: relative;
+      font-weight: $fontBold;
+      color: #111;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: .3rem;
+        background-color: #111;
+        z-index: 10;
+      }
+    }
+  }
+  ~ .tab {
+    padding-left: 1.8rem;
   }
 }

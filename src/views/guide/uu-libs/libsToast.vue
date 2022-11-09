@@ -18,7 +18,7 @@ export default defineComponent({
       Prism.highlightAll()
     })
 
-    const message = ref('안녕하세요')
+    const message = ref('선택한 기관의 자산정보가 연결되었습니다.')
 
     const toast = ref<InstanceType<typeof uuToast> | null>(null)
 

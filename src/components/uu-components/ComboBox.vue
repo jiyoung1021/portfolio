@@ -3,6 +3,7 @@
     <button
       type="button"
       class="btn-combo"
+      :class="comboCont? 'active':''"
       @click="comboCont = !comboCont"
     >
       {{ changeValue }}

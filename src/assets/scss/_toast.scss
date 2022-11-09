@@ -1,3 +1,32 @@
 .toast-area {
-  border: 1px solid red;
+  position: fixed;
+  left: 0;
+  bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 3.6rem);
+  height: 4.4rem;
+  margin: 0 1.8rem;
+  padding: 0 1.8rem;
+  color: #fff;
+  border-radius: .5rem;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.slide-up-enter-active {
+  transition: transform .3s;
+}
+.slide-up-leave-active {
+  transition: all .3s;
+}
+.slide-up-enter-from, .slide-up-leave-to {
+  transform: translate(0, 100%);
+  opacity: 0;
+}
+.slide-down-enter-active, .slide-down-leave-active {
+  transition: transform .3s;
+}
+.slide-down-enter-from, .slide-down-leave-to {
+  transform: translate(0%, 0);
 }

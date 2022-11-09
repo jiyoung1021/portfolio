@@ -1,6 +1,37 @@
 // 콤보박스
 .combobox-area {
+  padding: 1.8rem;
+  display: inline-flex;
+  flex-direction: column;
   .btn-combo {
-    border: 1px solid blue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 14.4rem;
+    height: 3.6rem;
+    padding: 0 1rem;
+    border: .1rem solid #e6e6e6;
+    border-radius: .4rem;
+    background-color: #fff;
+    &.active {
+      border: .1rem solid #555;
+    }
+  }
+  .combo-content {
+    border: 1px solid #555;
+    border-radius: .4rem;
+    background-color: #fff;
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 3.6rem;
+      padding: 0 1rem;
+      button {
+        &:active {
+          color: #488be2;
+        }
+      }
+    }
   }
 }

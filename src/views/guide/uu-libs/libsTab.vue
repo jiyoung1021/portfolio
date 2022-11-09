@@ -40,7 +40,7 @@ export default defineComponent({
       Prism.highlightAll()
     })
 
-    const tabs = ['tab1', 'tab2', 'tab3']
+    const tabs = ['자산', '소비', '목표']
 
     const tabs1 = ['tab12', 'tab22', 'tab32']
 

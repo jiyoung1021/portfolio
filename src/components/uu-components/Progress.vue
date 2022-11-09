@@ -1,15 +1,21 @@
 <template>
   <div class="progress-area">
-    <div
-      class="progress-bar"
-      :style="'width:' + stepNumber + '%'"
+    <transitionn
+      appear
+      @before-appear="ingNumber"
+      @after-appear="ingNumber"
     >
-      <span class="sr-only">총 {{ maxNumber }}단계 중 {{ ingNumber }}단계 진행 중</span>
-    </div>
+      <div
+        :style="{ width: stepNumber + '%'}"
+        class="progress-bar"
+      >
+        <span class="sr-only">총 {{ maxNumber }}단계 중 {{ ingNumber }}단계 진행 중</span>
+      </div>
+    </transitionn>
   </div>
 </template>
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, onMounted } from 'vue'
 
 export default defineComponent({
   props: {
@@ -28,6 +34,11 @@ export default defineComponent({
       const ingNumber = maxNumber * props.ingNumber
       return ingNumber
     })
+    onMounted(() => {
+      // style.transition = 'width 3s linear'
+      return stepNumber
+    })
+
     return {
       stepNumber
     }

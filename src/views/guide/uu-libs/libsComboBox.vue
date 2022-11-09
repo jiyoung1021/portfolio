@@ -39,7 +39,7 @@ export default defineComponent({
       Prism.highlightAll()
     })
 
-    const options = ['test1', 'test2', 'test3']
+    const options = ['잔액 높은 순', '연결 계좌 많은 순', 'DIY 순서']
 
     const comboValue = options[0]
 

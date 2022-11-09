@@ -679,6 +679,45 @@
         })
       </code>
     </pre>
+    <pre class="language-html">
+      <code>
+        closest : 주어진 css선택자와 일치하는 요소를 찾을 때까지 순회함
+        previousSibling : 앞 형제 노드 접근
+        nextSibling : 뒤 형제노드 접근
+        forEach : 배열에 사용하기 좋은 반복문
+      </code>
+    </pre>
+    <pre class="language-html">
+      <code>
+        transition : 컴포넌트로 싸여진 엘리먼트가 삽입되거나 제거 될 때 발생
+        트랜지션 클래스
+        v-enter-from
+        - enter의 시작 상태
+        - 엘리먼트가 삽입되기 전에 적용되고 한 프레임 후에 제거
+        v-enter-active
+        - enter의 활성 상태
+        - 진입 단계 동안 적용 엘리먼트가 삽입되기 전에 적용
+        - 트렌지션/애니메이션이 완료되면 제거
+        v-enter-to
+        - 집입 상태의 끝에서 실행
+        - 엘리먼트가 삽입된 후 트랜지션/애니메이션이 끝나면 제거되는 하나의 프레임 추가
+        v-leave-from
+        - leave를 위한 시작 상태
+        - 진출 트랜지션이 트리거 될 때 적용되고 한 프레임 후에 제거
+        v-leave-active
+        - leave의 활성 상태
+        - 전체 진출 상태에서 적용
+        - 진출 트랜지션이 트리거되면 적용되고 트랜지션/애니메이션이 완료되면 제거
+        v-leave-to
+        - 진출 상태 끝에서 실행
+        - 진출 트랜지션이 트리거되고 트랜지션/애니메이션이 끝나면 제거되는 하나의 프레임을 추가
+      </code>
+    </pre>
+    <pre class="language-html">
+      <code>
+        원페이지는 스크롤 이벤트를 줘서 높이값에 따라 페이지 이동하게 해야함
+      </code>
+    </pre>
   </div>
 </template>
 <script>

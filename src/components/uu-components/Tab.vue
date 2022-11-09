@@ -5,7 +5,7 @@
         v-for="(tab, index) in tabs"
         :key="index"
         class="tab"
-        :class="{'active' : tabIndex === index }"
+        :class="{'active' : tabIndex === index}"
       >
         <button
           type="button"
