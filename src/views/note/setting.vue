@@ -140,6 +140,11 @@
       }
     </div>
   </div>
+  <div>
+    다시 설치 받을 때
+    npm i --force
+    npm run serve
+  </div>
 </template>
 <script>
 import { defineComponent, onMounted } from 'vue'
